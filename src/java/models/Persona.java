@@ -6,12 +6,12 @@ public class Persona {
 
     private String nombre;
     private int documento;
-    private String fechaNac;
+    private Date fechaNac;
     private Cementerio cementerio;
     Scanner intro = new Scanner(System.in);
     public static ArrayList<Persona> visitantes = new ArrayList<>();
 
-    public Persona(String nombre, int documento, String fechaNac, Cementerio cementerio) {
+    public Persona(String nombre, int documento, Date fechaNac, Cementerio cementerio) {
         this.nombre = nombre;
         this.documento = documento;
         this.fechaNac = fechaNac;
@@ -68,11 +68,11 @@ public class Persona {
         return documento;
     }
 
-    public void setFechaNac(String fechaNac) {
+    public void setFechaNac(Date fechaNac) {
         this.fechaNac = fechaNac;
     }
 
-    public String getFechaNac() {
+    public Date getFechaNac() {
         return fechaNac;
     }
 

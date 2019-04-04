@@ -27,6 +27,6 @@
             </tr>
         </form>
     </table>
-    <c:if test="${!empty noCedula}"> <center>${noCedula} no es una cedula registrada en ${nombreCementerio}</center></c:if>
+    
 </main>
 <%@ include file="footer.jsp" %>

@@ -12,25 +12,28 @@ import models.Moderador;
 
 @WebServlet(urlPatterns = {"/Ingcedula"})
 public class Ingcedula extends HttpServlet {
+    public static int cedula;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {        
+            throws ServletException, IOException { 
+        Cementerio cementerio = Cementerio.buscarCementerio(Index.idCementerio);
+        request.setAttribute("nombreCementerio",cementerio.getNombre());
         RequestDispatcher view = request.getRequestDispatcher("ingcedula.jsp");
         view.forward(request, response);        
     }
     
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {        
-            int cedula = Integer.parseInt(request.getParameter("cedula")); 
-            Cementerio cementerio = Cementerio.buscarCementerio(Index.idCementerio);
+            throws ServletException, IOException {
+    Cementerio cementerio = Cementerio.buscarCementerio(Index.idCementerio);        
+            cedula = Integer.parseInt(request.getParameter("cedula")); 
             boolean ecliente = Cliente.clienteExiste(cedula, cementerio);
             boolean emoderador = Moderador.modExiste(cedula, cementerio);
-            request.setAttribute("nombreCementerio",Cementerio.buscarCementerio(Index.idCementerio).getNombre());
+            request.setAttribute("nombreCementerio",cementerio.getNombre());
             if(!ecliente && !emoderador){
-                request.setAttribute("noCedula", cedula);
-                RequestDispatcher view = request.getRequestDispatcher("ingcedula.jsp");
+                request.setAttribute("nombreCementerio", cementerio.getNombre());
+                RequestDispatcher view = request.getRequestDispatcher("nuevo.jsp");
                 view.forward(request, response);
             }else if(ecliente&&emoderador){
                 RequestDispatcher view = request.getRequestDispatcher("ambos.jsp");
@@ -39,8 +42,8 @@ public class Ingcedula extends HttpServlet {
                 RequestDispatcher view = request.getRequestDispatcher("cliente.jsp");
                 view.forward(request, response);
             }else if(emoderador){
-                    RequestDispatcher view = request.getRequestDispatcher("moderador.jsp");
-                    view.forward(request,response);
+                RequestDispatcher view = request.getRequestDispatcher("moderador.jsp");
+                view.forward(request,response);
             }
             
                    

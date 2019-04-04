@@ -8,7 +8,7 @@ public class Moderador extends Persona {
     private Cementerio cementerio;
     static ArrayList<Moderador> moderadores = new ArrayList<>();
 
-    public Moderador(String nombre, int documento, String fechaNac, String contrasena, Cementerio cementerio) {
+    public Moderador(String nombre, int documento, Date fechaNac, String contrasena, Cementerio cementerio) {
         super(nombre, documento, fechaNac, cementerio);
         this.contrasena = contrasena;
         this.cementerio = cementerio;

@@ -6,8 +6,8 @@ public class Lapida {
 
     private String nombreDueno;
     private int documentoDueno;
-    private String fechaNacDueno;
-    private String fechaDef;
+    private Date fechaNacDueno;
+    private Date fechaDef;
     public String epitafio;
     public static Ubicacion ubicacion;
     private boolean privacidad;
@@ -15,7 +15,7 @@ public class Lapida {
     private Cementerio cementerio;
     public static ArrayList<Lapida> lapidas = new ArrayList<>();
 
-    public Lapida(Persona persona, boolean privacidad, Ubicacion ubicacion, Cementerio cementerio, String epitafio, String fechaDef) {
+    public Lapida(Persona persona, boolean privacidad, Ubicacion ubicacion, Cementerio cementerio, String epitafio, Date fechaDef) {
         this.nombreDueno = persona.getNombre(); //Nombre de dueño de la lápida.
         this.documentoDueno = persona.getDocumento(); //Documento dueño de lápida.
         this.fechaNacDueno = persona.getFechaNac(); //Fecha de Nacimiento dueño de lápida.
@@ -33,11 +33,11 @@ public class Lapida {
         return cementerio;
     }
 
-    public String getFechaDef() {
+    public Date getFechaDef() {
         return fechaDef;
     }
 
-    public void setFechaDef(String fechaDef) {
+    public void setFechaDef(Date fechaDef) {
         this.fechaDef = fechaDef;
     }
 

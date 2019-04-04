@@ -12,12 +12,14 @@ import models.Cementerio;
 public class Index extends HttpServlet {
 
     public static int idCementerio;
-
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        request.setAttribute("cementerios", Datos.texto);
         RequestDispatcher view = request.getRequestDispatcher("index.jsp");
-        view.forward(request, response);        
+        view.forward(request, response);   
+
     }
     
     @Override
@@ -27,6 +29,7 @@ public class Index extends HttpServlet {
             Cementerio c = Cementerio.buscarCementerio(idCementerio);
             if(c == null){
                 request.setAttribute("noValido", idCementerio);
+                request.setAttribute("cementerios", Datos.texto);
                 RequestDispatcher view = request.getRequestDispatcher("index.jsp");
                 view.forward(request, response);               
             }else{
