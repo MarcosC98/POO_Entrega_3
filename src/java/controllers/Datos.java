@@ -42,6 +42,7 @@ public class Datos extends HttpServlet {
             Moderador moderador1 = new Moderador("David", 1090514247, Date.valueOf("1998-02-23"), "456", cementerio1);
             Moderador moderador2 = new Moderador("Mario", 1010215392, Date.valueOf("1994-06-13"), "666", cementerio2);
             Moderador moderador3 = new Moderador("Marcos", 1090514246, Date.valueOf("1998-02-23"), "123", cementerio1);
+            Moderador moderador4 = new Moderador("Carlos", 1010, Date.valueOf("1994-06-13"), "666", cementerio1);
             Ubicacion ubicacion1 = new Ubicacion(1, cementerio1);
             Ubicacion ubicacion2 = new Ubicacion(2, cementerio1);
             Lapida lapida1 = new Lapida(persona3, true, ubicacion1, cementerio1, "", null);
