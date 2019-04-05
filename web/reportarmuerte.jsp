@@ -6,7 +6,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1 align="center">LISTADO DE TUMBAS DEL CEMENTERIO</h1>  
+        <h1 align="center">REPORTAR MUERTE CLIENTE</h1>  
     </body>
 </html>
 

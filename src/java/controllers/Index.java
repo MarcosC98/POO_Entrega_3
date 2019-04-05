@@ -19,7 +19,6 @@ public class Index extends HttpServlet {
         request.setAttribute("cementerios", Datos.texto);
         RequestDispatcher view = request.getRequestDispatcher("index.jsp");
         view.forward(request, response);   
-
     }
     
     @Override

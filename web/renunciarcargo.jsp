@@ -6,7 +6,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1 align="center">LISTADO DE TUMBAS DEL CEMENTERIO</h1>  
+        <h1 align="center"> FUE UN PLACER HABERLO TENIDO COMO UN FUNCIONARIO DE NUESTRO CEMENTERIO. </h1>  
     </body>
 </html>
 

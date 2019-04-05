@@ -6,7 +6,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1 align="center">LISTADO DE TUMBAS DEL CEMENTERIO</h1>  
+        <h1 align="center">REGISTRAR MODERADOR</h1>  
     </body>
 </html>
 

@@ -9,7 +9,7 @@
       </div>
     
     <table align="center"> 
-        <form method="POST" action="./Ver_tumbas">            
+        <form method="POST" action="./ver_tumbas">            
             <tr>
                 <div style="text-align:center;">
                     <p> </p>
@@ -43,13 +43,13 @@
             <tr>
                 <div style="text-align:center;">
                     <p> </p>
-                    <input type="submit" name="nombreMod" value="4. Reportar Muerte de Ciente"/>
+                    <input type="submit" name="nombreMod" value="4. Reportar Muerte de Cliente"/>
                     <p> </p>
                 </div>
             </tr>
         </form>
         
-        <form method="POST" action="./cliente_a_CargoDeModerador">            
+        <form method="POST" action="./clientes_a_cargo">            
             <tr>
                 <div style="text-align:center;">
                     <p> </p>
@@ -59,7 +59,7 @@
             </tr>
         </form>
         
-        <form method="POST" action="./despedir_mod">            
+        <form method="POST" action="./despedir_moderador">            
             <tr>
                 <div style="text-align:center;">
                     <p> </p>
@@ -69,7 +69,7 @@
             </tr>
         </form>
         
-        <form method="POST" action="./mostrar_moderadores">            
+        <form method="POST" action="./renunciar_cargo">            
             <tr>
                 <div style="text-align:center;">
                     <p> </p>
